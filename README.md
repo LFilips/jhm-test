@@ -1,12 +1,16 @@
 
 # Scala-performance
 
-Simple project for the performance of different methods and code in scala, and to understand how to use
-micro benchmarking to test jvm code. It uses the sbt-jmh plugin. 
+Simple project for the performance of different methods and code in scala/java, and to understand how to use
+micro benchmarking to test jvm code. It uses the sbt-jmh plugin.
 
 ## How to Run
 
-Run benchmark using 
+First:
+
+`sbt clean compile`
+
+Then run benchmark using 
 
 `sbt jmh:run -i 20 -wi 10 -f1 -t1`. 
 

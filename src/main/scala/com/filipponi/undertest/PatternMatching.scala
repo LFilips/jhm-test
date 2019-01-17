@@ -5,7 +5,7 @@ import org.openjdk.jmh.annotations.Benchmark
 
 class PatternMatching {
 
-  @Benchmark
+  //@Benchmark
   def lastCondition(): Int = {
     number match {
       case 1 => 10
@@ -22,7 +22,7 @@ class PatternMatching {
     }
   }
 
-  @Benchmark
+  //@Benchmark
   def firstCondition(): Int = {
     number match {
       case 10 => 0
@@ -58,5 +58,7 @@ object PatternMatching {
   * [info]   (min, avg, max) = (320844818.390, 334405591.515, 338540917.996), stdev = 5013894.351
   * [info]   CI (99.9%): [330051746.538, 338759436.492] (assumes normal distribution)
   *
+  *
+  * The value of the firstCondition is slightly better, but a second run gave the opposite.
   *
   */
