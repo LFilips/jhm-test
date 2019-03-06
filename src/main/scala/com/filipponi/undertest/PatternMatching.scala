@@ -59,6 +59,7 @@ object PatternMatching {
   * [info]   CI (99.9%): [330051746.538, 338759436.492] (assumes normal distribution)
   *
   *
-  * The value of the firstCondition is slightly better, but a second run gave the opposite.
+  * The value of the firstCondition is slightly better, but a second run gave the opposite so there is possibly not
+  * much differnce in something like that.
   *
   */

@@ -31,6 +31,7 @@ class MapAndView {
 
 }
 
+// FIXME i'm not sure about which is the best way to pass value
 object MapAndView{
   val rand: Random.type = Random
   val testList: List[Int] = List.fill(1000)(rand.nextInt())
