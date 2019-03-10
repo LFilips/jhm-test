@@ -3,9 +3,14 @@ package com.filipponi.undertest
 import com.filipponi.undertest.PatternMatching.number
 import org.openjdk.jmh.annotations.Benchmark
 
+/**
+  * This test was a bit inconclusive, since different runs are generating different result. It is fair to
+  * assume that there is not real difference to have the right match as first or last condition, or at least this will
+  * not influence enought the running time. Even if the jhm is great for microbrenchmarking, a
+  */
 class PatternMatching {
 
-  //@Benchmark
+  @Benchmark
   def lastCondition(): Int = {
     number match {
       case 1 => 10
@@ -22,7 +27,7 @@ class PatternMatching {
     }
   }
 
-  //@Benchmark
+  @Benchmark
   def firstCondition(): Int = {
     number match {
       case 10 => 0
@@ -43,23 +48,3 @@ class PatternMatching {
 object PatternMatching {
   val number = 10
 }
-
-
-/**
-  * This are the result produced by this test with 1 fork, 1 thread, 20 iteration and 10 warmup:
-  *
-  * [info] Benchmark                        Mode  Cnt          Score        Error  Units
-  * [info] PatternMatching.firstCondition  thrpt   20  337208045.990 ± 587223.165  ops/s
-  * [info] PatternMatching.lastCondition   thrpt   20  338981764.563 ± 575461.111  ops/s
-  *
-  *
-  * [info] Result "com.filipponi.undertest.PatternMatching.firstCondition":
-  * [info]   334405591.515 ±(99.9%) 4353844.977 ops/s [Average]
-  * [info]   (min, avg, max) = (320844818.390, 334405591.515, 338540917.996), stdev = 5013894.351
-  * [info]   CI (99.9%): [330051746.538, 338759436.492] (assumes normal distribution)
-  *
-  *
-  * The value of the firstCondition is slightly better, but a second run gave the opposite so there is possibly not
-  * much differnce in something like that.
-  *
-  */

@@ -1,6 +1,7 @@
 package com.filipponi.undertest
 
 import com.filipponi.undertest.MapAndView._
+import org.openjdk.jmh.annotations.Benchmark
 
 import scala.util.Random
 
@@ -14,17 +15,17 @@ class MapAndView {
     *
     */
 
-//  @Benchmark
+  @Benchmark
   def consecutiveMap(): List[Int] = {
     testList.map(map1).map(map2).map(map3).map(map4).map(map5)
   }
 
-//  @Benchmark
+  @Benchmark
   def consecutiveMapUsingView(): List[Int] = {
     testList.view.map(map1).map(map2).map(map3).map(map4).map(map5).toList
   }
 
-//  @Benchmark
+  @Benchmark
   def composingFunction(): List[Int] = {
     testList.map(map1.compose(map2).compose(map3).compose(map4).compose(map5))
   }

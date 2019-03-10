@@ -20,11 +20,11 @@ public class RegexPerformance {
         value = RandomStringUtils.random(32, " abcdefghijklmnopqrstuvwxyz1234567890 ");
     }
 
-//    @Benchmark
+    @Benchmark
     public void replaceAll_precompiled(Blackhole blackhole) {
         blackhole.consume(PATTERN.matcher(value));
     }
-//    @Benchmark
+    @Benchmark
     public void replaceAll(Blackhole blackhole) {
         blackhole.consume(Pattern.compile("\\s").matcher(value));
     }
