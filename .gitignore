@@ -9,3 +9,4 @@ project/plugins/project/
 .lib/
 .idea/
 reports/
+.DS_STORE

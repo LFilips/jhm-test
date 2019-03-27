@@ -1,12 +1,13 @@
-package com.filipponi.undertest
+package com.filipponi.jmh
 
-import com.filipponi.undertest.PatternMatching.number
+import com.filipponi.jmh.PatternMatching.number
 import org.openjdk.jmh.annotations.Benchmark
 
 /**
   * This test was a bit inconclusive, since different runs are generating different result. It is fair to
   * assume that there is not real difference to have the right match as first or last condition, or at least this will
-  * not influence enought the running time. Even if the jhm is great for microbrenchmarking, a
+  * not influence enough the running time. Or it is possible that since i'm calling always with the same number the
+  * result is somehow cached/memoized? I need to investigate a bit more around this
   */
 class PatternMatching {
 

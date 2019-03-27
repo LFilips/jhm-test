@@ -1,8 +1,8 @@
-package com.filipponi.undertest
+package com.filipponi.jmh
 
 import java.util.concurrent.TimeUnit
 
-import com.filipponi.undertest.ScalaState.BenchmarkState
+import com.filipponi.jmh.ScalaState.BenchmarkState
 import org.openjdk.jmh.annotations._
 
 import scala.util.Try
@@ -50,9 +50,14 @@ object InvalidInput extends InvalidInput
 
 /**
   *
-  * First preliminary test shows that the withoutException version is much faster.
-  * [info] Benchmark                                  Mode  Cnt          Score         Error  Units
-  * [info] ExceptionOrNotException.withException     thrpt   25     412023.978 ±   32711.067  ops/s
-  * [info] ExceptionOrNotException.withoutException  thrpt   25  120181590.392 ± 6120455.705  ops/s
+  * [info] Benchmark                                 Mode  Cnt     Score     Error  Units
+  * [info] ExceptionOrNotException.withException     avgt    5  1153.889 ± 128.974  ns/op
+  * [info] ExceptionOrNotException.withoutException  avgt    5     4.388 ±   0.459  ns/op
+  *
+  * Are this result possible? A single cpu in my machine is 2.2 GHz, i can have 2 000 000 000 operations per second,
+  * this mean that i have 2 operation per nano seconds. Since the scoper is 4.891 means that the version without
+  * exception is resolved in two cpu clock, this means that only two operation are performed:
+  *
+  *
   */
 

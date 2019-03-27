@@ -1,6 +1,6 @@
-package com.filipponi.undertest
+package com.filipponi.jmh
 
-import com.filipponi.undertest.MapAndView._
+import com.filipponi.jmh.MapAndView._
 import org.openjdk.jmh.annotations.Benchmark
 
 import scala.util.Random

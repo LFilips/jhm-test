@@ -1,4 +1,4 @@
-package com.filipponi.undertest;
+package com.filipponi.jmh;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openjdk.jmh.annotations.*;
