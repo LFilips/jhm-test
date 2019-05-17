@@ -68,3 +68,5 @@ Then need to create the flamegraph from the jfr recording:
 * [sbt-jhm](https://github.com/ktoso/sbt-jmh)
 * [jmh scala example](https://github.com/ktoso/sbt-jmh/tree/master/plugin/src/sbt-test/sbt-jmh/run/src/main/scala/org/openjdk/jmh/samples)
 * [nanotrusting-nanotime](https://shipilev.net/blog/2014/nanotrusting-nanotime/])
+* [inside-hotspotVm-clocks](https://web.archive.org/web/20160308031939/https://blogs.oracle.com/dholmes/entry/inside_the_hotspot_vm_clocks)
+
