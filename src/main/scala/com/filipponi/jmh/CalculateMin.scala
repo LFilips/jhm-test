@@ -26,6 +26,11 @@ class CalculateMin {
     hole.consume(min)
   }
 
+  @Benchmark
+  def treeSetMinWithFirstKey(state: ListState, hole: Blackhole): Unit = {
+    val min = state.treeSet.firstKey
+    hole.consume(min)
+  }
 }
 
 
