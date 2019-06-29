@@ -32,7 +32,8 @@ class CalculateMin {
 object MinAlgorithmState {
   @State(Scope.Benchmark)
   class ListState{
-    var list: List[Int] = List.fill(100000)(Random.nextInt())
+    val rand = new scala.util.Random(0)
+    var list: List[Int] = List.fill(100000)(rand.nextInt())
     val treeSet: TreeSet[Int] = TreeSet(list:_*)
   }
 }
